@@ -20,11 +20,17 @@ from rest_framework.routers import DefaultRouter
 from alunos.views import EstadoViewSet
 from alunos.views import CidadeViewSet
 from alunos.views import AlunoViewSet
+from alunos.views import MedicoViewSet
+from alunos.views import PacienteViewSet
+from alunos.views import ConsultaViewSet
 
 router = DefaultRouter()
 router.register(r'estados', EstadoViewSet)
 router.register(r'cidades', CidadeViewSet)
 router.register(r'alunos', AlunoViewSet)
+router.register(r'pacientes', PacienteViewSet)
+router.register(r'medicos', MedicoViewSet)
+router.register(r'consultas', ConsultaViewSet)
 
 
 urlpatterns = [
