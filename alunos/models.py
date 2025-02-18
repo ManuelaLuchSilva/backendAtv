@@ -24,6 +24,8 @@ class Aluno(models.Model):
     def __str__(self):
         return f'{self.nome} - {self.cidade.nome} ({self.cidade.estado.sigla})'
 
+#Resolução da atividade 3
+
 class Paciente(models.Model):
     nome = models.CharField(max_length=100)
     data_nascimento = models.DateField()    
@@ -47,4 +49,4 @@ class Consulta(models.Model):
     descricao = models.CharField(max_length=300)
 
     def __str__(self):
-        return f'{self.id_medico.nome} - {self.id_paciente.nome} - {self.data_consulta}'
+        return f'{self.id_medico.id} - {self.id_paciente.id} - {self.data_consulta} - Descrição :{self.descricao}'
